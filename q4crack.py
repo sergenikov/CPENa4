@@ -36,8 +36,6 @@ print "Current hash before overwriting it"
 with binary:
     byte = binary.read(20)
     hexadecimal = binascii.hexlify(byte)
-    decimal = int(hexadecimal, 16)
-    binary = bin(decimal)[2:].zfill(8)
     print("hex: %s" % (hexadecimal))
 
 # Open file again to write the new password in place of the old one.
@@ -49,6 +47,4 @@ binary.seek(75804)
 with binary:
     byte = binary.read(20)
     hexadecimal = binascii.hexlify(byte)
-    decimal = int(hexadecimal, 16)
-    binary = bin(decimal)[2:].zfill(8)
     print("hex: %s" % (hexadecimal))
